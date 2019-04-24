@@ -18,7 +18,7 @@ A typical scenario might involve using [Jupyter Notebooks](https://www.csc.fi/ho
 
 *For GitHub*
 
-- [ ] Sign up for a GitHub account and apply for an [educational discount](https://help.github.com/en/articles/applying-for-an-educator-or-researcher-discount). This discount allows you to create unlimited private repositories.
+- [ ] Sign up for a GitHub account and apply for an [educational discount](https://help.github.com/en/articles/applying-for-an-educator-or-researcher-discount). This discount allows you to create unlimited private repositories. Note that verifying your eligibility for discount may take up to five days.
 - [ ] Sign up for [GitHub classroom](http://cscfi.github.io/pebbles/group_owners_guide.html). This is where you will set up individual and group assignments for students.
 
 ## Guides
