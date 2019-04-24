@@ -25,6 +25,19 @@ A typical scenario might involve using [Jupyter Notebooks](https://www.csc.fi/ho
 
 - Setting up a group on PB Notebooks: http://cscfi.github.io/pebbles/group_owners_guide.html
 
+## Building your own docker image
+
+- install docker on your Pouta instance
+- create a Python virtual environment
+- install the required packages
+- use `pip freeze > requirements.txt`
+- clean requirements.txt (remove pkg-resources=0.0.0 and install numpy=1.15.4)
+- clone the CSC notebooks repo
+- place your dockerfile and requirements.txt in the directory `/builds/`
+- build and upload to openshift
+- create Rahti deployment and warm up the cache
+- set docker registry to anonymous
+
 ## TODO
 
 - Find out how to set up permanent storage on Notebooks
