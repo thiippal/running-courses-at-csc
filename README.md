@@ -10,11 +10,11 @@ A typical scenario might involve using [Jupyter Notebooks](https://www.csc.fi/ho
 
 *For CSC*
 
-- [ ] [Register for a CSC account](https://sui.csc.fi/web/guest/register) via the Scientist's User Interface (SUI). Use your HAKA Federation login (that is, your university login) to authenticate with the service.
+- [ ] [Register for a CSC account](https://sui.csc.fi/web/guest/register) via the Scientist's User Interface (SUI). Log in using your HAKA Federation account (that is, your university account).
 
 - [ ] [Apply for a new CSC project](https://sui.csc.fi/group/sui/resources-and-applications/-/applications/academic-csc-project).
 
-- [ ] [Apply for cPouta cloud service access](https://sui.csc.fi/group/sui/resources-and-applications/-/applications/cpouta).
+- [ ] [Apply for cPouta cloud service access](https://sui.csc.fi/group/sui/resources-and-applications/-/applications/cpouta) for your project.
 
 - [ ] Apply for group administrator rights for CSC Notebooks by e-mailing *servicedesk (at) csc.fi*. Write that you are using CSC Notebooks for teaching and require group administrator rights. Mention your CSC username, which you can find under *My Account* on the top-right corner of the Scientist's User Interface (SUI).
 
@@ -82,13 +82,13 @@ pip install --upgrade setuptools
 
 Install the libraries required for your environment and their dependencies.
 
-To exemplify, installing libraries for natural language processing using Python, such as [spaCy](https://spacy.io/) and [NLTK](http://nltk.org/), would require entering the following commands: 
+For example, install Python libraries for natural language processing, such as [spaCy](https://spacy.io/) and [NLTK](http://nltk.org/), by entering the following commands: 
 ```
 pip install spacy
 pip install nltk
 ```
 
-### 4. Create a `requirements.txt` file
+### 4. Create a file that lists all libraries in the virtual environment
 
 Once you have finished installing the required libraries, enter the following command to create a file named `requirements.txt`:
 ```
@@ -108,9 +108,13 @@ Scroll down to the line containing `pkg-resources==0.0.0` and press <kbd>Control
 
 Another problem emerges from conflicting versions of the [NumPy](https://www.numpy.org/) library.
 
-To fix this problem, find the line containing `numpy==1.16.2` and change the line to `numpy==1.15.4`.
+Fix this problem by finding the line containing `numpy==1.16.2` and changing the line to `numpy==1.15.4`.
 
 Press <kbd>Control</kbd>+<kbd>x</kbd> followed by <kbd>y</kbd> to exit `nano` and save the changes.
+
+### 5. Clone the repository containing images for CSC Notebooks
+
+CSC provides [a repository](https://github.com/CSCfi/notebook-images) with example Docker images.
 
 TODO:
 
