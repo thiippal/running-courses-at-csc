@@ -30,10 +30,37 @@ A typical scenario might involve using [Jupyter Notebooks](https://www.csc.fi/ho
 
 - Setting up a group on PB Notebooks: http://cscfi.github.io/pebbles/group_owners_guide.html
 
-## Building your own docker image
+## Building your custom docker image
 
-- install docker on your Pouta instance
-- install OC command line tools
+This section explains how to create custom [Docker](https://www.docker.com/) images for the CSC Notebooks platform. Note that these instructions assume that you are familiar with using CSC Pouta cloud service. The instructions for using Pouta are available [here](https://research.csc.fi/pouta-user-guide).
+
+### Prerequisites
+
+- [ ] [Install Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) on your Pouta server
+
+- [ ] [Install OpenShift](https://www.okd.io/download.html) command line interface (CLI) on your Pouta server
+
+Enter the following commands to install prerequisites for the OpenShift CLI:
+```
+sudo apt -y install python-pip && pip install --upgrade pip && pip install python-swiftclient
+sudo apt-get -y install python-setuptools
+sudo pip install python-keystoneclient
+```
+
+Then download the OpenShift CLI – check the Open Source Kubernetes Distribution website for the [latest version](https://www.okd.io/download.html).
+
+Enter the following commands to install the OpenShift CLI:
+```
+wget https://github.com/openshift/origin/releases/download/v3.11.0/openshift-origin-client-tools-v3.11.0-0cbc58b-linux-64bit.tar.gz
+tar -xvzf openshift-origin-client-tools-v3.11.0-0cbc58b-linux-64bit.tar.gz
+chmod +x openshift-origin-client-tools-v3.11.0-0cbc58b-linux-64bit/oc
+sudo mv openshift-origin-client-tools-v3.11.0-0cbc58b-linux-64bit/oc /usr/local/sbin
+```
+
+Verify the installation by calling `oc` from the command line:
+```
+oc --help
+```
 
 - create a Python virtual environment
 - install the required packages
