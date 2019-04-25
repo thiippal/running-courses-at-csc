@@ -110,7 +110,7 @@ Another problem emerges from conflicting versions of the [NumPy](https://www.num
 
 To fix this problem, find the line containing `numpy==1.16.2` and change the line to `numpy==1.15.4`.
 
-Press <kbd>Control</kbd>+<kbd>x</kdb> followed by <kbd>y</kdb> to exit `nano` and save the changes.
+Press <kbd>Control</kbd>+<kbd>x</kbd> followed by <kbd>y</kbd> to exit `nano` and save the changes.
 
 TODO:
 
