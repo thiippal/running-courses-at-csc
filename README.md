@@ -62,8 +62,6 @@ oc --help
 
 ### 2. Create a Python virtual environment
 
-- [ ] Create a Python 3 virtual environment
-
 To create a Python 3 virtual environment named `course-env` in your home directory enter the following command:
 ```
 python3 -m venv ~/course-env
@@ -82,12 +80,40 @@ pip install --upgrade setuptools
 
 ### 3. Install the required libraries
 
+Install the libraries required for your environment and their dependencies.
 
+To exemplify, installing libraries for natural language processing using Python, such as [spaCy](https://spacy.io/) and [NLTK](http://nltk.org/), would require entering the following commands: 
+```
+pip install spacy
+pip install nltk
+```
 
+### 4. Create a `requirements.txt` file
 
-- install the required packages
-- use `pip freeze > requirements.txt`
-- clean requirements.txt (remove pkg-resources=0.0.0 and install numpy=1.15.4)
+Once you have finished installing the required libraries, enter the following command to create a file named `requirements.txt`:
+```
+pip freeze > requirements.txt
+```
+This file contains information on all the libraries and their dependencies currently installed for the Python 3 virtual environment.
+
+The file will be used to install these libraries into the Docker image.
+
+Note that as of April 2019, Ubuntu has a bug which adds erroneous information to the requirements file exported from `pip`.
+
+To prevent the bug from raising an error, enter the following command to edit `requirements.txt`:
+```
+nano requirements.txt
+```
+Scroll down to the line containing `pkg-resources==0.0.0` and press <kbd>Control</kbd>+<kbd>k</kbd> to delete the line.
+
+Another problem emerges from conflicting versions of the [NumPy](https://www.numpy.org/) library.
+
+To fix this problem, find the line containing `numpy==1.16.2` and change the line to `numpy==1.15.4`.
+
+Press <kbd>Control</kbd>+<kbd>x</kdb> followed by <kbd>y</kdb> to exit `nano` and save the changes.
+
+TODO:
+
 - clone the CSC notebooks repo
 - place your dockerfile and requirements.txt in the directory `/builds/`
 - build the dockerfile
