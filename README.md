@@ -12,9 +12,9 @@ A typical scenario might involve using [Jupyter Notebooks](https://www.csc.fi/ho
 
 - [ ] Register for [a CSC account](https://sui.csc.fi/web/guest/register) via the Scientist's User Interface (SUI). Use your HAKA Federation login (that is, your university login) to authenticate with the service.
 
-- [ ] Create a new CSC project in SUI.
+- [ ] [Apply for a new CSC project](https://sui.csc.fi/group/sui/resources-and-applications/-/applications/academic-csc-project) via SUI.
 
-- [ ] Apply for [cPouta cloud service access](https://research.csc.fi/pouta-application) using the Scientist's User Interface.
+- [ ] [Apply for cPouta cloud service access](https://sui.csc.fi/group/sui/resources-and-applications/-/applications/cpouta) using the Scientist's User Interface.
 
 - [ ] Apply for group administrator rights for Pouta Notebooks by e-mailing *servicedesk (at) csc.fi*. Write that you are running a course on Pouta Notebooks and require group administrator rights. Mention your CSC username, which you can find under *My Account* on SUI.
 
