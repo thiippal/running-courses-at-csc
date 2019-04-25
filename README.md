@@ -34,11 +34,11 @@ A typical scenario might involve using [Jupyter Notebooks](https://www.csc.fi/ho
 
 This section explains how to create custom [Docker](https://www.docker.com/) images for the CSC Notebooks platform. Note that these instructions assume that you are familiar with using CSC Pouta cloud service. The instructions for using Pouta are available [here](https://research.csc.fi/pouta-user-guide).
 
-### Prerequisites
+### 1. Install Docker and OpenShift Command Line Interface 
 
 - [ ] [Install Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) on your Pouta server
 
-- [ ] [Install OpenShift](https://www.okd.io/download.html) command line interface (CLI) on your Pouta server
+- [ ] [Install OpenShift](https://www.okd.io/download.html) Command Line Interface (CLI) on your Pouta server
 
 Enter the following commands to install prerequisites for the OpenShift CLI:
 ```
@@ -46,7 +46,6 @@ sudo apt -y install python-pip && pip install --upgrade pip && pip install pytho
 sudo apt-get -y install python-setuptools
 sudo pip install python-keystoneclient
 ```
-
 Then download the OpenShift CLI – check the Open Source Kubernetes Distribution website for the [latest version](https://www.okd.io/download.html).
 
 Enter the following commands to install the OpenShift CLI:
@@ -56,13 +55,36 @@ tar -xvzf openshift-origin-client-tools-v3.11.0-0cbc58b-linux-64bit.tar.gz
 chmod +x openshift-origin-client-tools-v3.11.0-0cbc58b-linux-64bit/oc
 sudo mv openshift-origin-client-tools-v3.11.0-0cbc58b-linux-64bit/oc /usr/local/sbin
 ```
-
 Verify the installation by calling `oc` from the command line:
 ```
 oc --help
 ```
 
-- create a Python virtual environment
+### 2. Create a Python virtual environment
+
+- [ ] Create a Python 3 virtual environment
+
+To create a Python 3 virtual environment named `course-env` in your home directory enter the following command:
+```
+python3 -m venv ~/course-env
+```
+To activate the virtual environment, enter the following command:
+```
+source ~/course-env/bin/activate
+```
+You should now see `(course-env)` in front of your command line prompt.
+
+Next, enter the following commands to update the tools for installing Python packages:
+```
+pip install --upgrade pip
+pip install --upgrade setuptools
+```
+
+### 3. Install the required libraries
+
+
+
+
 - install the required packages
 - use `pip freeze > requirements.txt`
 - clean requirements.txt (remove pkg-resources=0.0.0 and install numpy=1.15.4)
