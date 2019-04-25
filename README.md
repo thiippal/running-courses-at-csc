@@ -18,7 +18,7 @@ A typical scenario might involve using [Jupyter Notebooks](https://www.csc.fi/ho
 
 - [ ] Apply for group administrator rights for CSC Notebooks by e-mailing *servicedesk (at) csc.fi*. Write that you are using CSC Notebooks for teaching and require group administrator rights. Mention your CSC username, which you can find under *My Account* on the top-right corner of the Scientist's User Interface (SUI).
 
-- [ ] Apply for access to the Rahti platform if you plan to set up a custom environment for the course with specific libraries (e.g. spaCy and NLTK for natural language processing in Python) by e-mailing *rahti-support (at) csc.fi)*. Mention your CSC username, which you can find under **My Account** on SUI and your CSC project ID.
+- [ ] Apply for access to the CSC Rahti platform if you plan to set up a custom environment for the course with specific libraries (e.g. spaCy and NLTK for natural language processing in Python) by e-mailing *rahti-support (at) csc.fi)*. Mention your CSC username, which you can find under **My Account** on SUI and your CSC project ID, which you can find under **eService** &rarr; **My Projects**.
 
 *For GitHub*
 
