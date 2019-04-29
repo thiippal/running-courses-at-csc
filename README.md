@@ -26,11 +26,7 @@ A typical scenario might involve using [Jupyter Notebooks](https://www.csc.fi/ho
 
 - [ ] Sign up for [GitHub classroom](https://classroom.github.com/). This is where you will set up individual and group assignments for students.
 
-## Guides
-
-- Setting up a group on PB Notebooks: http://cscfi.github.io/pebbles/group_owners_guide.html
-
-## Building your custom docker image
+## Building your custom Docker image
 
 This section explains how to create custom [Docker](https://www.docker.com/) images for the CSC Notebooks platform. Note that these instructions assume that you are familiar with using CSC Pouta cloud service. The instructions for using Pouta are available [here](https://research.csc.fi/pouta-user-guide).
 
@@ -114,26 +110,39 @@ Press <kbd>Control</kbd>+<kbd>x</kbd> followed by <kbd>y</kbd> to exit `nano` an
 
 ### 5. Clone the repository containing images for CSC Notebooks
 
-CSC provides [a repository](https://github.com/CSCfi/notebook-images) with example Docker images.
+CSC provides [a repository](https://github.com/CSCfi/notebook-images) with example Dockerfiles, which define the environment to be created.
 
 Clone this repository to your Pouta instance using `git` by entering the following command:
 ```
 git clone https://github.com/CSCfi/notebook-images
 ```
+In addition to example Dockerfiles in the directory `builds`, the repository contains scripts for building the Docker images and uploading them to CSC servers.
 
+### 6. Define a Dockerfile and build an image
 
+TODO
 
-TODO:
-
-- clone the CSC notebooks repo
 - place your dockerfile and requirements.txt in the directory `/builds/`
 - build the dockerfile
 
-- set two local variables on your Pouta instance:
+### 7. Upload the Docker image on the Rahti platform
+
+To ensure the images are associated with your project, you first need to set up two local variables by entering the following commands on your Pouta instance:
 ```
 export OSO_PROJECT=<name-of-your-project>
 export OSO_REGISTRY=docker-registry.rahti.csc.fi
 ```
+To exemplify, the `OSO_PROJECT` variable for my NLP course was set using the command `export OSO_PROJECT=uh-eng-nlp`. Note that the project name is not wrapped in less-than `<` and greater-than `>` characters.
+
+Next, log in on the [Rahti platform](https://rahti.csc.fi:8443/) using a web browser. Choose **CSC account** and enter your credentials.
+
+In the Rahti main view, click your name on the upper right-hand corner and choose **Copy Login Command**.
+
+This copies a copy 
+
+
+TODO:
+
 - copy login command from Rahti
 - login to rahti via OC
 - login to Rahti registry via docker
