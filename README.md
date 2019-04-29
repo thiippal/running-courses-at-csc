@@ -16,9 +16,9 @@ A typical scenario might involve using [Jupyter Notebooks](https://www.csc.fi/ho
 
 - [ ] [Apply for cPouta cloud service access](https://sui.csc.fi/group/sui/resources-and-applications/-/applications/cpouta) for your project.
 
-- [ ] Apply for group administrator rights for CSC Notebooks by e-mailing *servicedesk (at) csc.fi*. Write that you are using CSC Notebooks for teaching and require group administrator rights. Mention your CSC username, which you can find under *My Account* on the top-right corner of the Scientist's User Interface (SUI).
+- [ ] [Apply for group administrator rights for CSC Notebooks](https://notebooks.csc.fi) by e-mailing *servicedesk (at) csc.fi*. Write that you are using CSC Notebooks for teaching and require group administrator rights. Mention your CSC username, which you can find under **My Account** on the top-right corner of the Scientist's User Interface (SUI).
 
-- [ ] Apply for access to the CSC Rahti platform if you plan to set up a custom environment for the course with specific libraries (e.g. spaCy and NLTK for natural language processing in Python) by e-mailing *rahti-support (at) csc.fi)*. Mention your CSC username, which you can find under **My Account** on SUI and your CSC project ID, which you can find under **eService** &rarr; **My Projects**.
+- [ ] If you plan to set up a custom environment for the course with specific libraries (e.g. spaCy and NLTK for natural language processing in Python), apply for access to the CSC Rahti platform by e-mailing *rahti-support (at) csc.fi)*. Mention your CSC username, which you can find under **My Account** on SUI and your CSC project ID, which you can find under **eService** &rarr; **My Projects**.
 
 *For GitHub*
 
@@ -98,7 +98,7 @@ This file contains information on all the libraries and their dependencies curre
 
 The file will be used to install these libraries into the Docker image.
 
-Note that as of April 2019, Ubuntu has a bug which adds erroneous information to the requirements file exported from `pip`.
+Note that as of April 2019, Ubuntu has a bug which adds a non-existent library to the requirements file exported from `pip` using `pip freeze`.
 
 To prevent the bug from raising an error, enter the following command to edit `requirements.txt`:
 ```
@@ -106,7 +106,7 @@ nano requirements.txt
 ```
 Scroll down to the line containing `pkg-resources==0.0.0` and press <kbd>Control</kbd>+<kbd>k</kbd> to delete the line.
 
-Another problem emerges from conflicting versions of the [NumPy](https://www.numpy.org/) library.
+As of April 2019, another problem emerges from conflicting versions of the [NumPy](https://www.numpy.org/) library.
 
 Fix this problem by finding the line containing `numpy==1.16.2` and changing the line to `numpy==1.15.4`.
 
@@ -115,6 +115,13 @@ Press <kbd>Control</kbd>+<kbd>x</kbd> followed by <kbd>y</kbd> to exit `nano` an
 ### 5. Clone the repository containing images for CSC Notebooks
 
 CSC provides [a repository](https://github.com/CSCfi/notebook-images) with example Docker images.
+
+Clone this repository to your Pouta instance using `git` by entering the following command:
+```
+git clone https://github.com/CSCfi/notebook-images
+```
+
+
 
 TODO:
 
