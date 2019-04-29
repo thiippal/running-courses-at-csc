@@ -138,7 +138,7 @@ Next, log in on the [Rahti platform](https://rahti.csc.fi:8443/) using a web bro
 
 In the Rahti main view, click your name on the upper right-hand corner and choose **Copy Login Command**.
 
-This copies a login command for OpenShift CLI on your clipboard, which includes a token for authenticating with the Rahti platform. Paste the login command on your Pouta instance by pressing <kbd>Control</kdb>+<kbd>v</kbd> and press <kbd>Enter</kbd> to log in on the Rahti platform.
+This copies a login command for OpenShift CLI on your clipboard, which includes a token for authenticating with the Rahti platform. Paste the login command on your Pouta instance by pressing <kbd>Control</kbd>+<kbd>v</kbd> and press <kbd>Enter</kbd> to log in on the Rahti platform.
 ```
 oc login https://rahti.csc.fi:8443 --token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
@@ -146,8 +146,6 @@ Note that the token is like a password and should be kept private.
 
 TODO:
 
-- copy login command from Rahti
-- login to rahti via OC
 - login to Rahti registry via docker
 ```docker login -u ignored -p $(oc whoami -t) $OSO_REGISTRY```
 - build and upload the image to openshift
