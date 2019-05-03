@@ -120,10 +120,21 @@ In addition to example Dockerfiles in the directory `builds`, the repository con
 
 ### 6. Define a Dockerfile and build an image
 
-TODO
+The custom environment for CSC Notebooks is defined in a Dockerfile. For an example, see `examples/pb-jupyter-nlp.dockerfile` in this repository.
 
-- place your dockerfile and requirements.txt in the directory `/builds/`
-- build the dockerfile
+Place the Dockerfile and your `requirements.txt` file created in step 4 into the subdirectory `builds` in the `notebooks-images` repo cloned in step 5.
+
+Change to the directory `builds` by entering the command `cd builds`.
+
+Next, execute the following command to build the docker image:
+```
+sh build.sh <dockerfile-name-without-extension>
+```
+For example, to build the Dockerfile in the examples directory of this repository, the command would be as follows:
+```
+sh build.sh pb-jupyter-nlp
+```
+
 
 ### 7. Upload the Docker image on the Rahti platform
 
