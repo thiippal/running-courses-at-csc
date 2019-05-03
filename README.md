@@ -118,15 +118,15 @@ git clone https://github.com/CSCfi/notebook-images
 ```
 In addition to example Dockerfiles in the directory `builds`, the repository contains scripts for building the Docker images and uploading them to CSC servers.
 
-### 6. Define a Dockerfile and build an image
+### 6. Define a Dockerfile and build the Docker image
 
-The custom environment for CSC Notebooks is defined in a Dockerfile. For an example, see `examples/pb-jupyter-nlp.dockerfile` in this repository.
+The custom environment for CSC Notebooks is defined in a Dockerfile. For an example, see [`examples/pb-jupyter-nlp.dockerfile`](examples/pb-jupyter-nlp.dockerfile) in this repository.
 
 Place the Dockerfile and your `requirements.txt` file created in step 4 into the subdirectory `builds` in the `notebooks-images` repo cloned in step 5.
 
 Change to the directory `builds` by entering the command `cd builds`.
 
-Next, execute the following command to build the docker image:
+Next, execute the following command to build the docker image on your Pouta server:
 ```
 sh build.sh <dockerfile-name-without-extension>
 ```
@@ -134,6 +134,7 @@ For example, to build the Dockerfile in the examples directory of this repositor
 ```
 sh build.sh pb-jupyter-nlp
 ```
+Note that the build process takes some time – be patient.
 
 ### 7. Upload the Docker image on the Rahti platform
 
@@ -154,11 +155,17 @@ oc login https://rahti.csc.fi:8443 --token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 Note that the token is like a password and should be kept private.
 
-TODO:
+Next, login to the Rahti registry via docker by entering the following command:
+```
+docker login -u ignored -p $(oc whoami -t) $OSO_REGISTRY
+```
+Finally, make sure you are in the `builds/` directory that contains your Dockerfile and the pre-built Docker image, and execute the following command to upload the image to OpenShift:
+```
+./build_and_upload_to_openshift.bash <name-of-your-dockerfile>
+```
+This will upload Docker image to the Rahti platform.
 
-- login to Rahti registry via docker
-```docker login -u ignored -p $(oc whoami -t) $OSO_REGISTRY```
-- build and upload the image to openshift
+TODO:
 
 - create Rahti deployment and warm up the cache by spinning up some ~20 pods
 - set docker registry to anonymous
