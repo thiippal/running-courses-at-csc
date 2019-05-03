@@ -30,7 +30,13 @@ A typical scenario might involve using [Jupyter Notebooks](https://www.csc.fi/ho
 
 This section explains how to create custom [Docker](https://www.docker.com/) images for the CSC Notebooks platform. Note that these instructions assume that you are familiar with using CSC Pouta cloud service. The instructions for using Pouta are available [here](https://research.csc.fi/pouta-user-guide).
 
-### 1. Install Docker and OpenShift Command Line Interface 
+### 1. Create a new project on the Rahti platform
+
+Log in on the [Rahti platform web interface](https://rahti.csc.fi:8443/) using a web browser. Choose **CSC account** and enter your credentials.
+
+### 2. Install Docker and OpenShift Command Line Interface
+
+Login on your Pouta server.
 
 - [ ] [Install Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) on your Pouta server
 
@@ -56,7 +62,7 @@ Verify the installation by calling `oc` from the command line:
 oc --help
 ```
 
-### 2. Create a Python virtual environment
+### 3. Create a Python virtual environment
 
 To create a Python 3 virtual environment named `course-env` in your home directory enter the following command:
 ```
@@ -74,7 +80,7 @@ pip install --upgrade pip
 pip install --upgrade setuptools
 ```
 
-### 3. Install the required libraries
+### 4. Install the required libraries
 
 Install the libraries required for your environment and their dependencies.
 
@@ -84,7 +90,7 @@ pip install spacy
 pip install nltk
 ```
 
-### 4. Create a file that lists all libraries in the virtual environment
+### 5. Create a file that lists all libraries in the virtual environment
 
 Once you have finished installing the required libraries, enter the following command to create a file named `requirements.txt`:
 ```
@@ -108,7 +114,7 @@ Fix this problem by finding the line containing `numpy==1.16.2` and changing the
 
 Press <kbd>Control</kbd>+<kbd>x</kbd> followed by <kbd>y</kbd> to exit `nano` and save the changes.
 
-### 5. Clone the repository containing images for CSC Notebooks
+### 6. Clone the repository containing images for CSC Notebooks
 
 CSC provides [a repository](https://github.com/CSCfi/notebook-images) with example Dockerfiles, which define the environment to be created.
 
@@ -118,7 +124,7 @@ git clone https://github.com/CSCfi/notebook-images
 ```
 In addition to example Dockerfiles in the directory `builds`, the repository contains scripts for building the Docker images and uploading them to CSC servers.
 
-### 6. Define a Dockerfile and build the Docker image
+### 7. Define a Dockerfile and build the Docker image
 
 The custom environment for CSC Notebooks is defined in a Dockerfile. For an example, see [`examples/pb-jupyter-nlp.dockerfile`](examples/pb-jupyter-nlp.dockerfile) in this repository.
 
@@ -136,7 +142,7 @@ sh build.sh pb-jupyter-nlp
 ```
 Note that the build process takes some time – be patient.
 
-### 7. Upload the Docker image on the Rahti platform
+### 8. Upload the Docker image on the Rahti platform
 
 To ensure the images are associated with your project, you first need to set up two local variables by entering the following commands on your Pouta instance:
 ```
@@ -145,7 +151,7 @@ export OSO_REGISTRY=docker-registry.rahti.csc.fi
 ```
 To exemplify, the `OSO_PROJECT` variable for my NLP course was set using the command `export OSO_PROJECT=uh-eng-nlp`. Note that the project name is not wrapped in less-than `<` and greater-than `>` characters.
 
-Next, log in on the [Rahti platform](https://rahti.csc.fi:8443/) using a web browser. Choose **CSC account** and enter your credentials.
+Next, switch to the [Rahti platform web interface](https://rahti.csc.fi:8443/). Choose **CSC account** and enter your credentials.
 
 In the Rahti main view, click your name on the upper right-hand corner and choose **Copy Login Command**.
 
@@ -164,6 +170,10 @@ Finally, make sure you are in the `builds/` directory that contains your Dockerf
 ./build_and_upload_to_openshift.bash <name-of-your-dockerfile>
 ```
 This will upload the Docker image to the Rahti platform.
+
+### 9. Deploy the image on the Rahti platform
+
+Open the [Rahti platform web interface](https://rahti.csc.fi:8443/) and select the project you set up in step 1.
 
 TODO:
 
