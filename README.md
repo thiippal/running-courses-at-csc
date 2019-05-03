@@ -163,7 +163,7 @@ Finally, make sure you are in the `builds/` directory that contains your Dockerf
 ```
 ./build_and_upload_to_openshift.bash <name-of-your-dockerfile>
 ```
-This will upload Docker image to the Rahti platform.
+This will upload the Docker image to the Rahti platform.
 
 TODO:
 
