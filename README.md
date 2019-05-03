@@ -185,13 +185,33 @@ Check the **Name** of the image in case the **Deploy** button remains inactive. 
 
 When ready, click **Deploy** to deploy the image.
 
+### 10. Create a route to the image for CSC Notebooks
 
+If the image is deployed successfully, the main view should now show the deployment configuration.
 
-TODO:
+Click **Create Route** from the lower right-hand side to create a route to the image.
+
+A window with options opens. Click **Create** to create the route.
+
+You should then see your deployment running in the main window.
+
+To expand the details for your deployment, click **>** on the left-hand side of the deployment name.
+
+### 11. Warm up the cache on Rahti
+
+TODO
 
 - create Rahti deployment and warm up the cache by spinning up some ~20 pods
+
+### 12. Set Docker registry to allow anonymous access
+
+TODO
+
 - set docker registry to anonymous
-- create an image for the group on Notebooks
+
+###
+
+- create a blueprint for the image on CSC Notebooks
 
 ## TODO
 
