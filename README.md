@@ -135,7 +135,6 @@ For example, to build the Dockerfile in the examples directory of this repositor
 sh build.sh pb-jupyter-nlp
 ```
 
-
 ### 7. Upload the Docker image on the Rahti platform
 
 To ensure the images are associated with your project, you first need to set up two local variables by entering the following commands on your Pouta instance:
