@@ -16,7 +16,7 @@ A typical scenario might involve using [Jupyter Notebooks](https://www.csc.fi/ho
 
 - [ ] [Apply for cPouta cloud service access](https://sui.csc.fi/group/sui/resources-and-applications/-/applications/cpouta) for your project.
 
-- [ ] [Apply for group administrator rights for CSC Notebooks](https://notebooks.csc.fi) by e-mailing *servicedesk (at) csc.fi*. Write that you are using CSC Notebooks for teaching and require group administrator rights. Mention your CSC username, which you can find under **My Account** on the top-right corner of the Scientist's User Interface (SUI).
+- [ ] [File a request for a new course](https://www.webropolsurveys.com/S/84118B6BD6E97501.par) on [CSC Notebooks](https://notebooks.csc.fi).
 
 - [ ] If you plan to set up a custom environment for the course with specific libraries (e.g. spaCy and NLTK for natural language processing in Python), apply for access to the CSC Rahti platform by e-mailing *rahti-support (at) csc.fi)*. Mention your CSC username, which you can find under **My Account** on SUI and your CSC project ID, which you can find under **eService** &rarr; **My Projects**.
 
