@@ -2,7 +2,7 @@
 
 This repository contains instructions for setting up and running courses at the University of Helsinki that use services provided by [CSC – IT Centre for Science](https://www.csc.fi/).
 
-A typical scenario might involve using [Jupyter Notebooks](https://www.csc.fi/home) for teaching materials and interactive programming using the [cloud computing infrastructure at CSC](https://notebooks.csc.fi).
+A typical scenario might involve using [Jupyter Notebooks](https://www.csc.fi/home) for integrating teaching materials and interactive programming using the [cloud computing infrastructure at CSC](https://notebooks.csc.fi). This does not require setting up development environments on the students' own computers.
 
 ## Prerequisites
 
