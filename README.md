@@ -217,5 +217,8 @@ TODO
 
 - Find out how to set up permanent storage on Notebooks
 
-# Setting up a course on GitHub
+# Setting up a course on GitHub Classroom
 
+Jacob Fiksel has written two excellent guides for using GitHub Classroom for both [teachers](https://github.com/jfiksel/github-classroom-for-teachers) and [students](https://github.com/jfiksel/github-classroom-for-students).
+
+Follow the instructions for teachers to set up the course organisation.
