@@ -1,8 +1,8 @@
-# Using CSC services for teaching at the University of Helsinki
+# Using CSC services for teaching at the Finnish universities
 
 This repository contains instructions for setting up and running courses at the University of Helsinki that use services provided by [CSC – IT Centre for Science](https://www.csc.fi/).
 
-A typical scenario might involve using [Jupyter Notebooks](https://www.csc.fi/home) for integrating teaching materials and interactive programming using the [cloud computing infrastructure at CSC](https://notebooks.csc.fi). This does not require setting up development environments on the students' own computers.
+A typical scenario might involve using [Jupyter Notebooks](https://www.csc.fi/home) for integrating teaching materials and interactive programming using the [cloud computing infrastructure at CSC](https://notebooks.csc.fi). This does not require setting up development environments on the students' own computers. Services such as [GitHub](https://www.github.com) may be used to host and distribute course materials and assignments.
 
 ## Prerequisites
 
@@ -211,7 +211,7 @@ Enter a **Name** for the volume, choose *Single User (RWO)* for **Access Mode** 
 
 ### 12. Warm up the cache on Rahti
 
-Because the images may be sizeable (e.g. 7GB), the students may experience delay when launching the instance.
+Because the images may be fairly big in size (e.g. 7GB), the students may experience delay when launching the instance.
 
 To reduce this delay after deploying or updating an image, warm up the image cache by spinning up multiple copies of the instance. This ensures that the new or updated image is present on the instance before it is launched.
 
@@ -225,17 +225,15 @@ The running replicas will be listed under *Pods* below. When all replicas are ru
 
 ### 13. Set Docker registry to allow anonymous access
 
-TODO
+Login to the [Rahti Docker registry](https://registry-console.rahti.csc.fi/) using your CSC account.
 
-- set docker registry to anonymous
+Click **Images** on the left-hand menu and select your current project by clicking its name in the main view.
+
+This opens the **Image Stream** view. Ensure that *Access Policy* is set to "Images may be pulled by anonymous users" to allow CSC Notebooks to access the image. Click the name of the *Access Policy* to change the policy.
 
 ###
 
 - create a blueprint for the image on CSC Notebooks
-
-## TODO
-
-- Find out how to set up permanent storage on Notebooks
 
 # Setting up a course on GitHub Classroom
 
