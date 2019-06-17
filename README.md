@@ -1,8 +1,8 @@
 # Using CSC services for teaching at the Finnish universities
 
-This repository contains instructions for setting up and running courses at the University of Helsinki that use services provided by [CSC – IT Centre for Science](https://www.csc.fi/).
+This repository contains instructions for setting up and running courses at Finnish universities that use services provided by [CSC – IT Centre for Science](https://www.csc.fi/). The instructions have been written at the University of Helsinki, but should be applicable to any institution in Finland with access to CSC services. 
 
-A typical scenario might involve using [Jupyter Notebooks](https://www.csc.fi/home) for integrating teaching materials and interactive programming using the [cloud computing infrastructure at CSC](https://notebooks.csc.fi). This does not require setting up development environments on the students' own computers. Services such as [GitHub](https://www.github.com) may be used to host and distribute course materials and assignments.
+A typical scenario for using CSC services might involve using [Jupyter Notebooks](https://www.csc.fi/home) for integrating teaching materials and interactive programming using the [cloud computing infrastructure at CSC](https://notebooks.csc.fi). This does not require setting up development environments on the students' own computers, allowing the teacher to focus on teaching instead of maintaining complex dependencies between libraries in various different environments. Services such as [GitHub](https://www.github.com) may be used to host and distribute course materials and assignments.
 
 ## Prerequisites
 
