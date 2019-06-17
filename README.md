@@ -197,13 +197,25 @@ You should then see your deployment running in the main window.
 
 To expand the details for your deployment, click **>** on the left-hand side of the deployment name.
 
-### 11. Warm up the cache on Rahti
+### 11. Create a persistent storage associated with the image
+
+If you want the students' work to be saved after shutting down a CSC Notebook, you need to request a persistent storage to be associated with each instance.
+
+To do so, click **Applications** in the left-hand menu and choose **Deployments**. Then select your current deployment by clicking it's name in the main view.
+
+Open the **Actions** menu on the top right-hand size and choose **Add Storage**.
+
+If no persistent volume exists, choose **Create Storage**.
+
+Enter a **Name** for the volume, choose *Single User (RWO)* for **Access Mode** and determing the size of the permanent volume by filling in the information under **Size**.  
+
+### 12. Warm up the cache on Rahti
 
 TODO
 
 - create Rahti deployment and warm up the cache by spinning up some ~20 pods
 
-### 12. Set Docker registry to allow anonymous access
+### 13. Set Docker registry to allow anonymous access
 
 TODO
 
