@@ -1,4 +1,4 @@
-# Using CSC services for teaching at the Finnish universities
+# Using CSC services for teaching at Finnish universities
 
 This repository contains instructions for setting up and running courses at Finnish universities that use services provided by [CSC – IT Centre for Science](https://www.csc.fi/). 
 
