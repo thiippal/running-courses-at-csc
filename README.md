@@ -197,7 +197,7 @@ You should then see your deployment running in the main window.
 
 To expand the details for your deployment, click **>** on the left-hand side of the deployment name.
 
-### 11. Create a persistent storage associated with the image
+### 11. Associate a persistent storage with the image
 
 If you want the students' work to be saved after shutting down a CSC Notebook, you need to request a persistent storage to be associated with each instance.
 
@@ -211,9 +211,17 @@ Enter a **Name** for the volume, choose *Single User (RWO)* for **Access Mode** 
 
 ### 12. Warm up the cache on Rahti
 
-TODO
+Because the images may be sizeable (e.g. 7GB), the students may experience delay when launching the instance.
 
-- create Rahti deployment and warm up the cache by spinning up some ~20 pods
+To reduce this delay after deploying or updating an image, warm up the image cache by spinning up multiple copies of the instance. This ensures that the new or updated image is present on the instance before it is launched.
+
+To do so, click **Applications** in the left-hand menu and choose **Deployments**. Then select your current deployment by clicking it's name in the main view.
+
+This will open the *History* tab showing your deployment history. Select the deployment with *Active* status by clicking the associated number, e.g. #2.
+
+This opens the **Details** view. Adjust the number of **Replicas** by editing the corresponding value or use the selector on the right-hand size. Increase the number of replicas to match the number of students expected to attend the class.
+
+The running replicas will be listed under *Pods* below. When all replicas are running, you can reduce the number of replicas back to one, as the image has been pre-loaded on all replicas.
 
 ### 13. Set Docker registry to allow anonymous access
 
