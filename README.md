@@ -227,7 +227,7 @@ This will open the *History* tab showing your deployment history. Select the dep
 
 This opens the **Details** view. Adjust the number of **Replicas** by editing the corresponding value or use the selector on the right-hand size. Increase the number of replicas to match the number of students expected to attend the class.
 
-The running replicas will be listed under *Pods* below. When all replicas are running, you can reduce the number of replicas back to one, as the image has been pre-loaded on all replicas.
+The running replicas will be listed under *Pods* below. When all replicas are running, reduce the number of replicas back to one, as the image has been pre-loaded on all replicas.
 
 ### 13. Set Docker registry to allow anonymous access
 
@@ -235,11 +235,11 @@ Login to the [Rahti Docker registry](https://registry-console.rahti.csc.fi/) usi
 
 Click **Images** on the left-hand menu and select your current project by clicking its name in the main view.
 
-This opens the **Image Stream** view. Ensure that *Access Policy* is set to "Images may be pulled by anonymous users" to allow CSC Notebooks to access the image. Click the name of the *Access Policy* to change the policy.
+This opens the **Image Stream** view. Ensure that *Access Policy* is set to "Images may be pulled by anonymous users" to allow CSC Notebooks to access the image. Click the name of the *Access Policy* to change the policy if necessary.
 
-###
+# Setting up a group on CSC Notebooks
 
-- create a blueprint for the image on CSC Notebooks
+TODO
 
 # Setting up a course on GitHub Classroom
 
