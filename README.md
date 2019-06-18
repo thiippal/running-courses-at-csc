@@ -219,9 +219,9 @@ Enter a **Name** for the volume, choose *Single User (RWO)* for **Access Mode** 
 
 Because the images may be fairly big in size (e.g. 7GB), the students may experience delay when launching the instance.
 
-To reduce this delay after deploying or updating an image, warm up the image cache by spinning up multiple copies of the instance. This ensures that the new or updated image is present on the instance before it is launched.
+To reduce this delay after deploying or updating an image, warm up the image cache by spinning up multiple copies of the instance. This ensures that the new or updated image is present on each instance before it is launched.
 
-To do so, click **Applications** in the left-hand menu and choose **Deployments**. Then select your current deployment by clicking it's name in the main view.
+To do so, click **Applications** in the left-hand menu and choose **Deployments**. Then select your current deployment by clicking its name in the main view.
 
 This will open the *History* tab showing your deployment history. Select the deployment with *Active* status by clicking the associated number, e.g. #2.
 
