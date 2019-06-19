@@ -241,7 +241,7 @@ This opens the **Image Stream** view. Ensure that *Access Policy* is set to "Ima
 
 Access the [CSC Notebooks](https://notebooks.csc.fi) service using a web browser. Log in using your HAKA Federation account (that is, your university account).
 
-The landing page will show a list of Blueprints, which consist of various interactive programming environments.
+The landing page will show a list of Blueprints, which are like "recipes" for launching various interactive programming environments.
 
 Provided that you have requested group administrator rights, you should see **Groups** and **Blueprints** in the menu on top of the page.
 
@@ -257,13 +257,13 @@ TODO: Finish this section.
 
 Click on the **Blueprints** tab in the top menu.
 
-The page shows various *Templates* for creating a *Blueprint*. Choose *Rahti Jupyter Minimal* and click **Create Blueprint**.
+The page shows various *Templates* for creating a Blueprint. Choose *Rahti Jupyter Minimal* and click **Create Blueprint**.
 
-Select the group created in step 1 in the **Select Group** menu.
+Select the group created in step 1 in the *Select Group* menu.
 
-Add an informative name and a description for the *Blueprint*.
+Add an informative name and a description for the Blueprint.
 
-Copy-paste the following environment variables into the section under **environment variables for docker, separated by space**.
+Copy-paste the following environment variables into the section under *environment variables for docker, separated by space*.
 
 ```
 JUPYTER_ENABLE_LAB=yes AUTODOWNLOAD_URL=https://raw.githubusercontent.com/thiippal/ENG-3072/master/init_env.sh AUTODOWNLOAD_EXEC=init_env.sh OPENBLAS_NUM_THREADS=2
@@ -271,9 +271,9 @@ JUPYTER_ENABLE_LAB=yes AUTODOWNLOAD_URL=https://raw.githubusercontent.com/thiipp
 
 This will open the JupyterLab computational environment when launching the instance. The `init_env.sh` shell script changes the user to the home directory and sets up variables necessary for cloning materials from GitHub.
 
-Adjust **Maximum life-time (days hours mins)** if necessary. The default of *4h 0m* is sufficient for a lecture.
+Adjust *Maximum life-time (days hours mins)* if necessary. The default of *4h 0m* is sufficient for a lecture.
 
-Under **image**, enter the address of your custom Docker image in the Rahti Docker Registry.
+Under *image*, enter the address of your custom Docker image in the Rahti Docker Registry.
 
 To locate the address, open a new browser login to the [Rahti Docker registry](https://registry-console.rahti.csc.fi/) using your CSC account.
 
@@ -283,9 +283,23 @@ This opens a page with essential information about the Docker image. Copy the ad
 
 To exemplify, a valid address should be in the following format: `docker-registry.rahti.csc.fi/uh-eng-nlp/pb-jupyter-lng_nlp:latest`
 
-Return to CSC Notebooks and enter this address under **image**.
+Return to CSC Notebooks and enter this address under *image*.
 
-Under 
+Under *volume_mount_point*, enter `/home/jovyan/work`.
+
+Adjust the **memory_limit** as necessary. For my NLP course, I used 8192MB or 8GB per instance.
+
+Then define the **Maximum instances per user**. 1 is sufficient for most purposes.
+
+Finally, click **Create** to create the Blueprint.
+
+A new Blueprint should now appear under the header *Blueprints*.
+
+Click **Activate** to activate the Blueprint.
+
+Then click **Link** to copy a link to the environment.
+
+Share this link with the course participants.
 
 # Setting up a course on GitHub Classroom
 
