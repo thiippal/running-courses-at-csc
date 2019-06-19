@@ -297,9 +297,7 @@ A new Blueprint should now appear under the header *Blueprints*.
 
 Click **Activate** to activate the Blueprint.
 
-Then click **Link** to copy a link to the environment.
-
-Share this link with the course participants.
+Verify the setup by navigating to the **Dashboard** tab in the top menu. The Blueprint should be visible under the list of *Blueprints* with a blue **Launch** button next to it.
 
 # Setting up a course on GitHub Classroom
 
