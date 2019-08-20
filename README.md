@@ -243,7 +243,7 @@ Access the [CSC Notebooks](https://notebooks.csc.fi) service using a web browser
 
 The landing page will show a list of Blueprints, which are like "recipes" for launching various interactive programming environments.
 
-Provided that you have requested group administrator rights, you should see **Groups** and **Blueprints** in the menu on top of the page.
+Provided that you have requested group administrator rights for CSC Notebooks, you should see **Groups** and **Blueprints** in the menu on top of the page.
 
 ## 1. Set up a group
 
@@ -251,7 +251,15 @@ Click on the **Groups** tab in the top menu.
 
 Click **Create a New Group** to create a group for course participants.
 
-TODO: Finish this section.
+Enter a name and a description for the group and click **Create**.
+
+The newly created group should now be visible under the **List of Available Groups**.
+
+Select the group and copy the *Join Code*.
+
+Distribute this code to students and instruct them to login to CSC Notebooks, select **Account** and click **Join Group**. Enter the code to join the group.
+
+For more information on group administration, see the [Group Owner's Guide](http://cscfi.github.io/pebbles/group_owners_guide.html) for CSC Notebooks.
 
 ## 2. Create a Blueprint
 
