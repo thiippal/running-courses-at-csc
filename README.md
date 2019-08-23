@@ -312,3 +312,9 @@ Verify the setup by navigating to the **Dashboard** tab in the top menu. The Blu
 Jacob Fiksel has written two excellent guides for using GitHub Classroom for both [teachers](https://github.com/jfiksel/github-classroom-for-teachers) and [students](https://github.com/jfiksel/github-classroom-for-students).
 
 Follow the instructions for teachers to set up the course organisation.
+
+# Practical issues
+
+## Before the course starts
+
+1. Invite students to the course repository by adding them as team members to the group for students.
