@@ -317,4 +317,4 @@ Follow the instructions for teachers to set up the course organisation.
 
 ## Before the course starts
 
-1. Invite students to the course repository by adding them as team members to the group for students.
+### 1. Invite students to the course repository by adding them as team members to the group for students.
