@@ -146,7 +146,7 @@ For example, to build the Dockerfile in the examples directory of this repositor
 ```
 sh build.sh pb-jupyter-nlp
 ```
-Note that the build process takes some time – be patient.
+Building the Dockerfile from scratch can take a long time. Subsequent builds are faster thanks to cached steps.
 
 ### 8. Upload the Docker image on the Rahti platform
 
