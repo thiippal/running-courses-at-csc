@@ -146,7 +146,12 @@ For example, to build the Dockerfile in the examples directory of this repositor
 ```
 sh build.sh pb-jupyter-nlp
 ```
-Building the Dockerfile from scratch can take a long time. Subsequent builds are faster thanks to cached steps.
+Building the Dockerfile from scratch can take a long time. Later builds are faster due to cached steps.
+
+---
+Note that if you have built multiple Docker images, you can easily run out of space on a standard Pouta instance, which has an 80GB disk. Use `df -h` to check the available disk space and if necessary, use `docker system prune` to clear build cache, dangling images, etc.
+
+---
 
 ### 8. Upload the Docker image on the Rahti platform
 
