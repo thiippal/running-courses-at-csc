@@ -294,7 +294,7 @@ Click **Images** on the left-hand menu and select your current project by clicki
 
 This opens a page with essential information about the Docker image. Copy the address under the header *To pull this image*, excluding the commands preceding the address, e.g. `sudo docker pull`.
 
-To exemplify, a valid address should be in the following format: `docker-registry.rahti.csc.fi/uh-eng-nlp/pb-jupyter-lng_nlp:latest`
+To exemplify, a valid address should be in the following format: `docker-registry.rahti.csc.fi/uh-eng-nlp/pb-jupyter-nlp:latest`
 
 Return to CSC Notebooks and enter this address under *image*.
 
