@@ -186,7 +186,7 @@ This will upload the Docker image to the Rahti platform.
 
 Open the [Rahti platform web interface](https://rahti.csc.fi:8443/) and select the project set up in step 1.
 
-Click on **Deploy Image** in the main window in the middle.
+Click on **Deploy Image** under the *Add to Project* menu on the right-hand side of the main window.
 
 Select **Image Stream Tag**. Select your project from drop-down menu for *Namespace*. Then select your image name from the next drop-down menu for *Image Stream*. Finally, enter `latest` in the *Tag* menu and press <kbd>Tab</kbd>.
 
