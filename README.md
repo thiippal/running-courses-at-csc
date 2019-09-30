@@ -279,16 +279,16 @@ Add an informative name and a description for the Blueprint.
 Copy-paste the following environment variables into the section under *environment variables for docker, separated by space*.
 
 ```
-JUPYTER_ENABLE_LAB=yes AUTODOWNLOAD_URL=https://raw.githubusercontent.com/thiippal/ENG-3072/master/init_env.sh AUTODOWNLOAD_EXEC=init_env.sh OPENBLAS_NUM_THREADS=2
+JUPYTER_ENABLE_LAB=yes AUTODOWNLOAD_EXEC=init_env.sh OPENBLAS_NUM_THREADS=2
 ```
 
-This will open the JupyterLab computational environment when launching the instance. The `init_env.sh` shell script changes the user to the home directory and sets up variables necessary for cloning materials from GitHub.
+This will open the JupyterLab computational environment when launching the instance. The `init_env.sh` shell script changes the user to the home directory and sets up variables necessary for cloning materials from GitHub. The information for downloading the shell script is provided shortly below.
 
 Adjust *Maximum life-time (days hours mins)* if necessary. The default of *4h 0m* is sufficient for a lecture.
 
 Under *image*, enter the address of your custom Docker image in the Rahti Docker Registry.
 
-To locate the address, open a new browser login to the [Rahti Docker registry](https://registry-console.rahti.csc.fi/) using your CSC account.
+To locate the address, open a new browser and login to the [Rahti Docker registry](https://registry-console.rahti.csc.fi/) using your CSC account.
 
 Click **Images** on the left-hand menu and select your current project by clicking its name in the main view. Under the header *Images pushed recently*, click the most recent tag for your Docker image, e.g. *:latest*.
 
@@ -302,7 +302,9 @@ Under *volume_mount_point*, enter `/home/jovyan/work`.
 
 Adjust the **memory_limit** as necessary. For my NLP course, I used 8192MB or 8GB per instance.
 
-Then define the **Maximum instances per user**. 1 is sufficient for most purposes.
+Next, define the **Maximum instances per user**, limiting the number of instances to one per session. 1 is sufficient for most purposes.
+
+Enter the location of a shell script used to set environment variables under **Autodownload URL**, e.g. `https://raw.githubusercontent.com/thiippal/ENG-3072/master/init_env.sh`. You can name the file below by filling in **Autodownload file name**. The original name of the file is a good choice, e.g. `init_env.sh`.
 
 Finally, click **Create** to create the Blueprint.
 
